@@ -1,0 +1,41 @@
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [scala / Compile / compile] Found inputs: /home/cpu11462-local/Desktop/scala/*.{java,scala},/home/cpu11462-local/Desktop/scala/src/main/java/**/*.{java,scala},/home/cpu11462-local/Desktop/scala/src/main/resources/**/*,/home/cpu11462-local/Desktop/scala/src/main/scala/**/*.{java,scala},/home/cpu11462-local/Desktop/scala/src/main/scala-2.11/**/*.{java,scala}[0m
+[0m[[0m[0minfo[0m] [0m[0m1. Monitoring source files for scala/compile...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mscala / Compile / compile - Accepted event for /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala (previous stamp: Hash(0ba099ff6c9d4d32e5a38a28892fb3845f80d190), current stamp: Hash(6f9b2175e168a3af0f316b294ad347564ecc9666))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala -> Trigger. Returning: (Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala, 2020-Aug-14 17:18:16.780 ICT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala. Running 'compile'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala, 2020-Aug-14 17:18:16.780 ICT).[0m
+[0m[[0m[0minfo[0m] [0m[0m2. Monitoring source files for scala/compile...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mscala / Compile / compile - Accepted event for /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mscala / Compile / compile - Accepted event for /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala (previous stamp: Hash(6f9b2175e168a3af0f316b294ad347564ecc9666), current stamp: Hash(4d18a6b79f7152a6d5f7ed5d670b359908ae8cf4))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala -> Trigger. Returning: (Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala, 2020-Aug-14 17:18:20.607 ICT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala. Running 'compile'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala, 2020-Aug-14 17:18:20.607 ICT).[0m
+[0m[[0m[0minfo[0m] [0m[0m3. Monitoring source files for scala/compile...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mDiscarding entry for recently updated path /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala. This event occurred 1 ms since the last event for this path.[0m
+[0m[[0m[0mdebug[0m] [0m[0mscala / Compile / compile - Accepted event for /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mscala / Compile / compile - Accepted event for /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala (previous stamp: Hash(4d18a6b79f7152a6d5f7ed5d670b359908ae8cf4), current stamp: Hash(d9a512a4f182f4513a68405eba35ef2b0a96c109))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala -> Trigger. Returning: (Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala, 2020-Aug-14 17:18:23.236 ICT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala. Running 'compile'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala, 2020-Aug-14 17:18:23.236 ICT).[0m
+[0m[[0m[0minfo[0m] [0m[0m4. Monitoring source files for scala/compile...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mDiscarding entry for recently updated path /home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala. This event occurred 1 ms since the last event for this path.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: Run().[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: Run().[0m

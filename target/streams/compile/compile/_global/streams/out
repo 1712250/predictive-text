@@ -1,0 +1,35 @@
+[0m[[0m[31merror[0m] [0m[0m/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala:52:61: Cannot find an implicit ExecutionContext. You might pass[0m
+[0m[[0m[31merror[0m] [0m[0man (implicit ec: ExecutionContext) parameter to your method[0m
+[0m[[0m[31merror[0m] [0m[0mor import scala.concurrent.ExecutionContext.Implicits.global.[0m
+[0m[[0m[31merror[0m] [0m[0m        for (f <- filepaths) yield Future[Iterator[String]] {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala:52:16: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : List[Nothing][0m
+[0m[[0m[31merror[0m] [0m[0m required: scala.concurrent.Future[Iterator[String]][0m
+[0m[[0m[31merror[0m] [0m[0m        for (f <- filepaths) yield Future[Iterator[String]] {[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala:61:11: value onComplete is not a member of Iterator[String][0m
+[0m[[0m[31merror[0m] [0m[0m        f onComplete {[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala:62:40: value foreach is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          case Success(words) => words.foreach(w => dict.insert)[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala:62:58: missing argument list for method insert in trait Dictionary[0m
+[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
+[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `insert _` or `insert(_)` instead of `insert`.[0m
+[0m[[0m[31merror[0m] [0m[0m          case Success(words) => words.foreach(w => dict.insert)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala:60:22: Cannot find an implicit ExecutionContext. You might pass[0m
+[0m[[0m[31merror[0m] [0m[0man (implicit ec: ExecutionContext) parameter to your method[0m
+[0m[[0m[31merror[0m] [0m[0mor import scala.concurrent.ExecutionContext.Implicits.global.[0m
+[0m[[0m[31merror[0m] [0m[0m      futures.foreach(f =>[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala:67:7: not found: value words[0m
+[0m[[0m[31merror[0m] [0m[0m      words.foreach(dict.insert)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/cpu11462-local/Desktop/scala/src/main/scala/Main.scala:67:26: missing argument list for method insert in trait Dictionary[0m
+[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
+[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `insert _` or `insert(_)` instead of `insert`.[0m
+[0m[[0m[31merror[0m] [0m[0m      words.foreach(dict.insert)[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m
