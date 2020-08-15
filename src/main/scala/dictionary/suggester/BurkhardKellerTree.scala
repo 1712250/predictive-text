@@ -31,6 +31,7 @@ class BurkhardKellerTree(
       current: Node,
       word: String
   ): ArrayBuffer[Tuple2[String, Int]] = {
+
     if (current.word.isEmpty)
       return ArrayBuffer.empty
 
@@ -40,14 +41,24 @@ class BurkhardKellerTree(
       similarWords += Tuple2(current.word, dist)
 
     var ndist = math.max(dist - tolerance, 1)
-    while (ndist < dist + tolerance) {
-      current.next(ndist) match {
-        case Some(node) => similarWords ++= getSimilarWords(node, word)
-        case _          =>
+    val maxdist = math.min(dist + tolerance, 2 * maximumWordLen)
+
+    try {
+      while (ndist < maxdist) {
+        current.next(ndist) match {
+          case Some(node) => similarWords ++= getSimilarWords(node, word)
+          case _          =>
+        }
+        ndist += 1
       }
-      ndist += 1
+    } catch {
+      case e: Throwable =>
+        println(
+          s"$word and ${current.word}: $dist"
+        )
     }
     similarWords
+
   }
 
   def transfer(another: Suggester): Unit = {}
@@ -75,10 +86,17 @@ class BurkhardKellerTree(
 
   private def addNode(current: Node, word: String): Unit = {
     val distance = calcDistance(word, current.word)
-    if (distance == 0) return
-    current.next(distance) match {
-      case Some(node) => addNode(node, word)
-      case _          => current.next(distance) = Some(new Node(word))
+    if (distance == 0 || distance >= 2 * maximumWordLen) return
+    try {
+      current.next(distance) match {
+        case Some(node) => addNode(node, word)
+        case _          => current.next(distance) = Some(new Node(word))
+      }
+    } catch {
+      case e: Throwable =>
+        println(
+          s"$word and ${current.word}: $distance"
+        )
     }
   }
 }

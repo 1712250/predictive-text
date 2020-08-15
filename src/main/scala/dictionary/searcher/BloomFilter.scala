@@ -8,10 +8,19 @@ class BloomFilter(private val maximumEntries: Int) extends Searcher {
 
   def insert(word: String): Unit = {
     for (hf <- hashFuncs) {
-      val hash = hf.getHash(word, maximumEntries * 8)
+      var hash = hf.getHash(word, maximumEntries * 8)
+      if (hash < 0) hash = hash + maximumEntries * 8
       val i = hash / 8
       val j = hash % 8
-      filter(i) = (filter(i).toByte | (1 << j).toByte).toByte
+      try {
+        filter(i) = (filter(i).toByte | (1 << j).toByte).toByte
+      } catch {
+        case e: Throwable =>
+          println(
+            s"Word: $word, hash: $hash, i: $i, j: $j"
+          )
+      }
+
     }
   }
 

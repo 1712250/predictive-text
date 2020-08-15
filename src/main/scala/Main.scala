@@ -12,13 +12,13 @@ import scala.util.{Success, Failure}
 import java.io._
 
 object Main {
-  val directory = "/home/cpu11462-local/Desktop/scala/blogs"
+  val directory = "./blogs"
   val injector: ServiceInjector = new BloomBKService
   val dict = injector.getDictionary
 
   def main(args: Array[String]): Unit = {
     loadDatasets
-    // interactive
+    interactive
 
     val file = new File("datasets.txt")
     val bw = new BufferedWriter(new FileWriter(file))
@@ -39,7 +39,7 @@ object Main {
     if (s.isEmpty)
       return false
     for (c <- s) {
-      if (!Character.isLetter(c))
+      if (c < 'A' || c > 'z' || (c > 'Z' && c < 'a'))
         return false;
     }
     return true
@@ -47,26 +47,17 @@ object Main {
 
   def loadDatasets() {
     val filepaths = getListOfFiles(directory)
-    try {
-      val futures: Future[Iterator[String]] =
-        for (f <- filepaths) yield Future[Iterator[String]] {
-          println(s"Processing $f...")
-          val lines = Source.fromFile(f).getLines
-          val words =
-            lines.flatMap(line => line.split(" ").filter(word => isWord(word)))
-          words
-        }
-
-      futures.foreach(f =>
-        f onComplete {
-          case Success(words) => words.foreach(w => dict.insert)
-          case Failure(err) =>
-            println("An error has occurred: " + err.getMessage)
-        }
-      )
-      words.foreach(dict.insert)
-    } catch {
-      case e: Throwable => println(s"Error $e")
+    for (f <- filepaths) {
+      try {
+        // println(s"Processing $f...")
+        val lines = Source.fromFile(f).getLines
+        val words =
+          lines.flatMap(line => line.split(" ").filter(word => isWord(word)))
+        words.foreach(dict.insert)
+      } catch {
+        case e: Throwable =>
+        // println(s"File $f: Error while parsing words. Exception: $e")
+      }
     }
   }
 
