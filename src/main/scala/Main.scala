@@ -13,18 +13,13 @@ import java.io._
 
 object Main {
   val directory = "./blogs"
+  val datasetsFilename = "./datasets.txt"
   val injector: ServiceInjector = new BloomBKService
   val dict = injector.getDictionary
 
   def main(args: Array[String]): Unit = {
     loadDatasets
     interactive
-
-    val file = new File("datasets.txt")
-    val bw = new BufferedWriter(new FileWriter(file))
-    val text = dict.getSuggestion("", 1e6.toInt).mkString(" ")
-    bw.write(text)
-    bw.close()
   }
 
   def getListOfFiles(dir: String): List[String] = {
@@ -45,19 +40,36 @@ object Main {
     return true
   }
 
-  def loadDatasets() {
-    val filepaths = getListOfFiles(directory)
-    for (f <- filepaths) {
+  def preprocess() {
+    val dir = getListOfFiles(directory)
+    for (f <- dir) {
       try {
-        // println(s"Processing $f...")
+        println(s"Processing $f...")
         val lines = Source.fromFile(f).getLines
         val words =
           lines.flatMap(line => line.split(" ").filter(word => isWord(word)))
         words.foreach(dict.insert)
       } catch {
         case e: Throwable =>
-        // println(s"File $f: Error while parsing words. Exception: $e")
+          println(s"File $f: Error while parsing words. Exception: $e")
       }
+    }
+    val file = new File(datasetsFilename)
+    val bw = new BufferedWriter(new FileWriter(file))
+    val text = dict.getSuggestion("", 1e6.toInt).mkString(" ")
+    bw.write(text)
+    bw.close()
+  }
+
+  def loadDatasets() {
+    try {
+      print("Loading datasets...")
+      val lines = Source.fromFile(datasetsFilename).getLines
+      lines.flatMap(line => line.split(" ")).foreach(dict.insert)
+      println(" Done")
+    } catch {
+      case e: Throwable =>
+        println(s"Error while parsing words. Exception: $e")
     }
   }
 

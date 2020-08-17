@@ -7,7 +7,7 @@ import dictionary.suggester._
 class BloomBKService extends ServiceInjector {
   def getDictionary(): Dictionary = {
     val searcher = SearcherFactory.getSearcher("bloom", 1e6.toInt)
-    val suggester = SuggesterFactory.getSuggester("bktree", 12, 12)
+    val suggester = SuggesterFactory.getSuggester("bktree", 12, 3)
     val dict = new TwoDataStructuresDict
     dict.setSearcher(searcher)
     dict.setSuggester(suggester)

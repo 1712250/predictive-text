@@ -1,5 +1,9 @@
 [0m[[0m[0mdebug[0m] [0m[0mPackaging /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/predictive-text_2.11-1.0.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$loadDatasets$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$loadDatasets$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$preprocess$1$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$preprocess$1$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	dictionary[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/dictionary[0m
 [0m[[0m[0mdebug[0m] [0m[0m	dictionary/TwoDataStructuresDict.class[0m
@@ -72,10 +76,12 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$interactive$1$$anonfun$apply$mcV$sp$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$getListOfFiles$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$getListOfFiles$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$loadDatasets$1$$anonfun$1$$anonfun$apply$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$loadDatasets$1$$anonfun$1$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$preprocess$1$$anonfun$1$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$preprocess$1$$anonfun$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$isWord$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$isWord$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$preprocess$1$$anonfun$apply$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$preprocess$1$$anonfun$apply$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	function[0m
@@ -102,12 +108,10 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$interactive$1$$anonfun$apply$mcV$sp$1$$anonfun$apply$mcV$sp$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$loadDatasets$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$loadDatasets$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$preprocess$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$preprocess$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$getListOfFiles$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$getListOfFiles$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$loadDatasets$1$$anonfun$apply$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$loadDatasets$1$$anonfun$apply$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Main$$anonfun$loadDatasets$1$$anonfun$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/lhvubtqn/Desktop/VNG/module_3/vng-module-3/target/scala-2.11/classes/Main$$anonfun$loadDatasets$1$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
