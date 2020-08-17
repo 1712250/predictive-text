@@ -1,9 +1,9 @@
-/blogs
+blogs/
 
-/.bloop
+.bloop/
 
-/.metals
+.metals/
 
-/target
+target/
 
-/project
+project/
