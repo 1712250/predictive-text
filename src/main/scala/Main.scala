@@ -18,11 +18,11 @@ object Main {
   var dict = injector.getDictionary
 
   def main(args: Array[String]): Unit = {
-    injector = new CuckooBKService
-    dict = injector.getDictionary
+    // injector = new CuckooBKService
+    // dict = injector.getDictionary
     // dict = new TrieDict
     // preprocess
-    loadDatasets
+    benchmark(loadDatasets)
     interactive
   }
 
@@ -70,7 +70,7 @@ object Main {
       print("Loading datasets...")
       val lines = Source.fromFile(datasetsFilename).getLines
       lines.foreach(line => line.split(" ").foreach(dict.insert))
-      println(" Done")
+      print(" Done")
     } catch {
       case e: Throwable =>
         println(s"Error while parsing words. Exception: $e")

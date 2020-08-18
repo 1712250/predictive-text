@@ -4,7 +4,7 @@ import function._
 class BloomFilter(private val maximumEntries: Int) extends Searcher {
   private val filter: Array[Byte] = Array.ofDim[Byte](maximumEntries)
   private val hashFuncs: List[HashFunction] =
-    List(new ProductHash(), new SumHash(), new SumSquareHash())
+    List(new ProductHash, new SumHash, new SumSquareHash, new Base26Hash)
 
   def insert(word: String): Unit = {
     for (hf <- hashFuncs) {
