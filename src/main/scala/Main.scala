@@ -14,10 +14,12 @@ import java.io._
 object Main {
   val directory = "./blogs"
   val datasetsFilename = "./datasets.txt"
-  val injector: ServiceInjector = new BloomBKService
+  var injector: ServiceInjector = new BloomBKService
   var dict = injector.getDictionary
 
   def main(args: Array[String]): Unit = {
+    injector = new CuckooBKService
+    dict = injector.getDictionary
     // dict = new TrieDict
     // preprocess
     loadDatasets
