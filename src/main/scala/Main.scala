@@ -15,9 +15,11 @@ object Main {
   val directory = "./blogs"
   val datasetsFilename = "./datasets.txt"
   val injector: ServiceInjector = new BloomBKService
-  val dict = injector.getDictionary
+  var dict = injector.getDictionary
 
   def main(args: Array[String]): Unit = {
+    // dict = new TrieDict
+    // preprocess
     loadDatasets
     interactive
   }
@@ -65,7 +67,7 @@ object Main {
     try {
       print("Loading datasets...")
       val lines = Source.fromFile(datasetsFilename).getLines
-      lines.flatMap(line => line.split(" ")).foreach(dict.insert)
+      lines.foreach(line => line.split(" ").foreach(dict.insert))
       println(" Done")
     } catch {
       case e: Throwable =>
@@ -79,6 +81,7 @@ object Main {
     println("*****************************************")
     breakable(
       while (true) {
+        print("> ")
         val word = readLine()
         val arr = word.split(" ")
         arr(0) match {
@@ -94,16 +97,21 @@ object Main {
           }
 
           arr(0) match {
-            case "i" => dict.insert(arr(1))
-            case "c" => {
-              if (dict.contains(arr(1))) println("Word may be exist!")
-              else println("Word is not exist!")
-            }
-            case "s" => {
-              print("Suggestions: ")
-              dict.getSuggestion(arr(1), 5).foreach(w => print(s"$w "))
-              println
-            }
+            case "i" =>
+              benchmark(() => {
+                dict.insert(arr(1))
+                print("Inserted")
+              })
+            case "c" =>
+              benchmark(() => {
+                if (dict.contains(arr(1))) print("Word may be exist!")
+                else print("Word is not exist!")
+              })
+            case "s" =>
+              benchmark(() => {
+                print("Suggestions: ")
+                dict.getSuggestion(arr(1), 5).foreach(w => print(s"$w "))
+              })
             case s => println(s"Unknown command: $s")
           }
         }
@@ -111,4 +119,10 @@ object Main {
     )
   }
 
+  def benchmark(f: () => Unit) {
+    val t = System.nanoTime
+    f()
+    val duration = (System.nanoTime - t) / 1e6d
+    println(s"\t -- in $duration milisecond(s)")
+  }
 }
